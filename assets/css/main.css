@@ -1,13 +1,7 @@
-@import url(fontawesome-all.min.css);
+@import url('/assets/webfonts/fa-regular-400.svg');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-html,
+@import url('/assets/webfonts/GreatVibes.ttf') html,
 body,
 div,
 span,
@@ -282,8 +276,8 @@ h6 {
 	font-weight: 600;
 	line-height: 1.5;
 	margin: 0 0 1rem 0;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
+
+
 }
 
 h1 a,
@@ -314,7 +308,14 @@ h6.major {
 h1 {
 	font-size: 2.25rem;
 	line-height: 1.3;
-	letter-spacing: 0.5rem;
+
+}
+
+h1.cursive {
+	font-weight: 100;
+	font-size: 42pt;
+	font-family: 'Great Vibes',
+		cursive;
 }
 
 h2 {
@@ -717,7 +718,7 @@ input[type="radio"]+label:before {
 	text-decoration: none;
 	border-bottom: none;
 	margin-top: 10px;
-  position: relative;
+	position: relative;
 }
 
 .icon:before {
@@ -1420,8 +1421,10 @@ body.is-preload #bg:before {
 	border-radius: 100%;
 }
 
-#header .logo .icon:before {
-	font-size: 2rem;
+#header .logo #icon {
+	border: none;
+	object-fit: scale-down;
+	padding: 4px;
 }
 
 #header .content {
@@ -1430,6 +1433,8 @@ body.is-preload #bg:before {
 	border-top-width: 1px;
 	border-bottom-width: 1px;
 	max-width: 100%;
+	border-left-width: 0;
+	border-right-width: 0;
 }
 
 #header .content .inner {
@@ -1576,9 +1581,11 @@ body.is-preload #header .content .inner {
 		padding: 2.5rem 1rem;
 	}
 
+
 	#header .content p {
 		line-height: 1.875;
 	}
+
 
 }
 

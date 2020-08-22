@@ -1,9 +1,3 @@
-///
-/// Dimension by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Header */
 
 #header {
@@ -24,7 +18,7 @@
 	>* {
 		@include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
 		position: relative;
-		margin-top: 3.5rem;
+
 
 		&:before {
 			content: '';
@@ -46,6 +40,14 @@
 		}
 	}
 
+	.content {
+		border-left-style: hidden;
+		border-right-style: hidden;
+		border-left-width: 0;
+		border-right-width: 0;
+
+	}
+
 	>div.logo {
 		width: 5.5rem;
 		height: 5.5rem;
@@ -55,16 +57,15 @@
 		border: solid _size(border-width) _palette(border);
 		border-radius: 100%;
 
-		>img.icon {
-			padding: 0;
-			border: 0;
-			font-size: 100%;
-			font: inherit;
-			vertical-align: baseline;
-			margin-top: 10px;
-		}
+		>#icon {
+			scale: 0.75;
 
+		}
 	}
+}
+
+
+}
 
 
 }
@@ -77,6 +78,8 @@
 	border-bottom-width: _size(border-width);
 	max-width: 100%;
 
+
+
 	.inner {
 		@include vendor('transition', ('max-height #{_duration(intro)} ease',
 				'padding #{_duration(intro)} ease',
@@ -86,19 +89,28 @@
 		padding: 3rem 2rem;
 		max-height: 40rem;
 		overflow: hidden;
+		border-left-style: hidden;
+		border-right-style: hidden;
+
+
+		;
 
 		> :last-child {
 			margin-bottom: 0;
 		}
 	}
 
-	p {
-		text-transform: uppercase;
-		letter-spacing: _font(letter-spacing);
-		font-size: 0.8rem;
-		line-height: 2;
-	}
+
+
 }
+
+p {
+	text-transform: uppercase;
+	letter-spacing: _font(letter-spacing);
+	font-size: 0.8rem;
+	line-height: 2;
+}
+
 
 nav {
 	ul {
@@ -130,7 +142,7 @@ nav {
 
 			}
 
-			&:hover {}
+
 
 			a:hover {
 				background-color: _palette(border-bg);
@@ -189,6 +201,12 @@ body.is-preload & {
 			padding-bottom: 0;
 			opacity: 0;
 		}
+
+		.cursive {
+			font-family: 'Great Vibes', cursive;
+		}
+
+
 	}
 }
 
@@ -212,16 +230,8 @@ body.is-preload & {
 		}
 	}
 
-	.logo {
 
-
-
-
-
-		&:before {
-			size: 1.75rem;
-		}
-	}
+}
 }
 
 .content {
@@ -238,10 +248,6 @@ body.is-preload & {
 @include breakpoint('<=xsmall') {
 	padding: 1.5rem 0;
 
-	img.icon {
-		margin-top: 0px;
-		scale: 0.75;
-	}
 
 	.content {
 		.inner {
